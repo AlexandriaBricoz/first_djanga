@@ -1,0 +1,57 @@
+/* Стили для шапки */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стили для заголовка блога */
+h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.hd {
+    font-size: 28px;
+    margin: 0;
+}
+
+
+/* Стили для статей блога */
+article {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Стили для заголовков статей */
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Стили для текста статей */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #0074d9;
+    text-decoration: none;
+}
+
+/* Стили при наведении на ссылки */
+a:hover {
+    text-decoration: underline;
+}
