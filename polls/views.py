@@ -1,4 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
+from django.shortcuts import render
+
+from .models import *
 
 
 def fuktorial(x):
@@ -15,7 +18,6 @@ def summ(request):
             value2 = int(request.GET['k'])
         except:
             raise Http404()
-
     return HttpResponse(f"<h1>{value1}+{value2} = {value1 + value2}<h1>")
 
 
@@ -24,13 +26,17 @@ def fuktor(request, value):
 
 
 def main(request):
-    response = open('my_html/main.html')
-    html_doc = response.read()
-    return HttpResponse(f"{html_doc}")
+    return render(request, 'polls/mask.html', {'title': 'Главная страница'})
 
 
-def def2(request):
-    return HttpResponse('привет')
+def about(request):
+    return render(request, 'polls/about.html', {'title': 'O нас'})
+
+
+def article(request):
+    # objects
+    articles = Article.objects.all()
+    return render(request, 'polls/article.html', {'articles': articles, 'title': 'Мои статьи'})
 
 
 def pageNotFound(request, exception):

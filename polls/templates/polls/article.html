@@ -1,0 +1,12 @@
+{% extends 'polls/mask.html' %}
+
+{% block content %}
+<article>
+    {% for i in articles %}
+    <h2>{{i.title}}</h2>
+    <p>{{i.content}}</p>
+    <p>Автор: Имя Автора</p>
+    <p>{{i.time_create}}</p>
+    {% endfor %}
+</article>
+{% endblock %}

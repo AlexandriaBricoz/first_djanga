@@ -1,4 +1,7 @@
 /* Стили для шапки */
+body {
+    background-image: url(static/polls/image/coffee.jpg);
+}
 header {
     background-color: #333;
     color: #fff;
