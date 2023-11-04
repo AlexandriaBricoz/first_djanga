@@ -1,56 +1,102 @@
-/* Стили для шапки */
-body {
-    background-image: url(static/polls/image/coffee.jpg);
+.text-about {
+    font-size: 12px;
+    font-family: Georgia, "Times New Roman";
 }
-header {
-    background-color: #333;
-    color: #fff;
+.article-label {
+    border-radius: 20px;
+    color: green;
+    padding:    1% 1%;
+    height: 10%
+    width: 2%
+
+}
+.button-save {
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman";
+    border-radius: 20px;
     text-align: center;
-    padding: 20px;
+    background-color: rgb(133, 158, 70);
+}
+.href {
+    font-size: 50px;
+    color: green;
+    margin: 1%
+}
+.fon {
+    background-color: rgb(53, 66, 161);
+}
+.article{
+    background-color: rgb(135, 204, 148);
+    margin: 2% 5% 0;
+}
+
+.dir-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 40%; /* Изображение будет заполнять всю ширину контейнера */
+    height: auto; /* Автоматическое вычисление высоты для сохранения соотношения сторон */
+    display: ;
+}
+.i-title {
+    text-align: center;
+}
+.i-content {
+    padding-bottom: 3%
+}
+.text-green {
+    color: rgb(49, 107, 173);
+}
+/* Стили для шапки */
+header {
+    background-color: rgb(121, 209, 171);
+    color: green;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
 }
 
 /* Стили для заголовка блога */
 h1 {
     font-size: 28px;
     margin: 0;
+    color: rgb(49, 107, 173);
 }
-
-.hd {
-    font-size: 28px;
-    margin: 0;
-}
-
 
 /* Стили для статей блога */
 article {
     border: 1px solid #ccc;
-    margin: 20px;
-    padding: 10px;
+    margin: 2%;
+    padding: 4%;
 }
 
 /* Стили для заголовков статей */
 h2 {
     font-size: 24px;
     margin: 0;
+    color: rgb(49, 107, 173);
 }
 
 /* Стили для текста статей */
 p {
     font-size: 16px;
     line-height: 1.5;
+    color: rgb(49, 107, 173);
 }
 
 /* Стили для подвала */
 footer {
-    background-color: #333;
+    background-color: rgb(121, 209, 171);
     color: #fff;
     text-align: center;
-    padding: 10px;
+    margin: 2%;
 }
 
 /* Стили для ссылок */
 a {
-    color: #0074d9;
+    color: rgb(49, 107, 173);
     text-decoration: none;
 }
 

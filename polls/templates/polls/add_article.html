@@ -1,0 +1,31 @@
+{% extends 'polls/mask.html' %}
+{% load static %}
+
+{% block content %}
+
+<article class="article">
+        <form action="{% url 'successful' %}" method="">
+            <dir class="dir-center">
+                <label class="article-label">Название статьи:</label>
+                <input name="title" placeholder="Введите название статьи" class="article-label">
+                <br>
+            </dir>
+            <dir class="dir-center">
+                <label class="article-label">Текст статьи:</label>
+            </dir>
+
+            <dir class="dir-center">
+                <br>
+                <br>
+                <textarea class="article-label" name="content" rows="10" cols="50" placeholder="Введите текст статьи"></textarea>
+                <br>
+            </dir>
+            <dir class="dir-center">
+                <button type="submit" class="button-save">
+                    Сохранить
+                </button>
+            </dir>
+        </form>
+</article>
+
+{% endblock %}

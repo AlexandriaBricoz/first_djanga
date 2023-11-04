@@ -6,10 +6,15 @@
     <title>{{title}}</title>
     <link type="text/css" rel="stylesheet" href="{% static 'polls/css/styles.css' %}" />
 </head>
-<body>
+<body class="fon">
     <header>
-        <h1 style>{{title}}</h1>
+        <h1 class="text-green">{{title}}</h1>
     </header>
+    <dir class="href">
+        {% for i in menu %}
+        <a href="{% url i.url_name %}">{{i.title}}</a>
+        {% endfor %}
+    </dir>
     {% block content %}
     {% endblock %}
     <footer>
