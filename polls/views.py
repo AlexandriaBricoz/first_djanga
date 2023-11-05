@@ -41,7 +41,7 @@ def show_article(request, art_id):
         'articles': articles,
         'title': 'Статья',
         'menu': menu,
-        'article': articles[art_id - 1]
+        'article': Article.objects.get(pk=art_id)
     }
     return render(request, 'polls/article.html', context=context)
 
