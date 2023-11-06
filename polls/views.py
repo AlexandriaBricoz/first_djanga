@@ -12,16 +12,16 @@ menu = [
 
 
 def home(request):
-    return render(request, 'polls/home.html', {'title': 'Главная страница', 'menu': menu})
+    return render(request, 'polls/home1.html', {'title': 'Главная страница', 'menu': menu})
 
 
 def about(request):
-    return render(request, 'polls/about.html', {'title': 'O нас', 'menu': menu})
+    return render(request, 'polls/about1.html', {'title': 'O нас', 'menu': menu})
 
 
 def article(request):
     articles = Article.objects.all()
-    return render(request, 'polls/articles.html', {'articles': articles, 'title': 'Мои статьи', 'menu': menu})
+    return render(request, 'polls/articles1.html', {'articles': articles, 'title': 'Мои статьи', 'menu': menu})
 
 
 def add_article(request):
@@ -32,7 +32,7 @@ def add_article(request):
         'menu': menu,
         'home': menu[0]['url_name']
     }
-    return render(request, 'polls/add_article.html', context=context)
+    return render(request, 'polls/add_article1.html', context=context)
 
 
 def show_article(request, art_id):
@@ -43,7 +43,7 @@ def show_article(request, art_id):
         'menu': menu,
         'article': Article.objects.get(pk=art_id)
     }
-    return render(request, 'polls/article.html', context=context)
+    return render(request, 'polls/article1.html', context=context)
 
 
 def pageNotFound(request, exception):
@@ -62,4 +62,14 @@ def successful_add(request):
         'menu': menu,
         'content': content
     }
-    return render(request, 'polls/suссessful_add.html', context=context)
+    return render(request, 'polls/suссessful_add1.html', context=context)
+
+def test(request):
+    articles = Article.objects.all()
+    context = {
+        'articles': articles,
+        'title': 'Главная страница',
+        'menu': menu,
+    }
+    return render(request, 'polls/index.html', context=context)
+

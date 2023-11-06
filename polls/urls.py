@@ -9,4 +9,5 @@ urlpatterns = [
     path('add/', add_article, name='add_article'),
     path('article/<int:art_id>/', show_article, name='article'),
     path('successful_add/', successful_add, name='successful'),
+    path('test/', test, name='test'),
 ]

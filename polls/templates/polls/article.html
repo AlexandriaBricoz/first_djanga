@@ -10,5 +10,12 @@
         </div>
         <p>Автор: Имя Автора</p>
         <p>{{article.time_create}}</p>
+        <div class="post">
+				<p class="meta"><span class="date">{{i.time_create}}</span> Posted by <a href="#">Someone</a></p>
+				<h2 class="title"><a href="#">{{i.title}}</a></h2>
+				<div class="entry">
+					<p>{{i.content}}</p>
+				</div>
+        </div>
 </article>
 {% endblock %}

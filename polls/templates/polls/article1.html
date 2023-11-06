@@ -1,0 +1,14 @@
+{% extends 'polls/mask1.html' %}
+{% load static %}
+
+{% block content %}
+<article class="article">
+        <div class="post">
+				<p class="meta"><span class="date">{{article.time_create}}</span> Posted by <a href="#">Someone</a></p>
+				<h2 class="title"><a href="#">{{article.title}}</a></h2>
+				<div class="entry">
+					<p>{{article.content|linebreaks}}</p>
+				</div>
+        </div>
+</article>
+{% endblock %}

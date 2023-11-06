@@ -1,0 +1,24 @@
+{% extends 'polls/mask1.html' %}
+{% load static %}
+
+{% block content %}
+
+	<div id="page-bgtop">
+		<div id="content">
+				{% for i in articles %}
+			<div class="post">
+				<p class="meta"><span class="date">{{i.time_create}}</span> Posted by <a href="#">Someone</a></p>
+				<h2 class="title"><a href="#">{{i.title}}</a></h2>
+				<div class="entry">
+					<p>{{i.content|linebreaks|truncatewords:50}}</p>
+				</div>
+				<p><a href="{{ i.get_absolute_url }}">Читать статью</a></p>
+			</div>
+			{% endfor %}
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+
+
+{% endblock %}
